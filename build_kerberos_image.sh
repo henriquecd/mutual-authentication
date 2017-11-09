@@ -43,12 +43,4 @@ cp $madir/ma-serviceregistry/Java/ServiceRegistry/ServiceRegistry-ear/target/ser
 cp $madir/ma-libjcrypto/target/libjcrypto-2.0.0-SNAPSHOT.jar $madir/application
 cp $madir/ma-libjcrypto/module.xml $madir/application
 cp $madir/ma-libaes-c/src/libjcrypto.so $madir/application
-
 cp $madir/ma-loggingapi/LoggingAPI/LoggingAPI-ear/target/loggingapi.ear $madir/application
-
-# Create Docker Image
-cd $madir
-docker build -t "dojot/mutual-authentication" --no-cache .
-
-rm $madir/application/*
-rmdir $madir/application
