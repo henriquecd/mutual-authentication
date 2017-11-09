@@ -4,7 +4,9 @@ MAINTAINER Henrique Canto Duarte hcanto@cpqd.com.br
 
 USER root
 
-RUN yum -y install nmap
+RUN yum -y --enablerepo=extras install epel-release
+RUN yum -y install python-pip
+RUN pip install cqlsh
 RUN sed -i "s|core-threads=\"5\" max-threads=\"25\"|core-threads=\"50\" max-threads=\"500\"|g" /opt/jboss/wildfly/standalone/configuration/standalone.xml
 
 USER jboss
