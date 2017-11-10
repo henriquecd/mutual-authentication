@@ -1,5 +1,7 @@
 #!/bin/bash
-set -e
+set -ex
+
+execstack --version || apt-get install -y execstack
 
 madir=$(pwd)
 
