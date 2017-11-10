@@ -37,7 +37,7 @@ cd $madir/ma-serviceregistry/Java/ServiceRegistry/
 mvn clean package -U
 
 # Copy targets
-mkdir $madir/application
+mkdir -p $madir/application
 
 cp $madir/ma-kerberos/Java/KerberosIntegration/KerberosIntegration-ear/target/kerberosintegration.ear $madir/application
 cp $madir/ma-crypto/Java/CryptoIntegration/CryptoIntegration-ear/target/cryptointegration.ear $madir/application
